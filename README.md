@@ -4,6 +4,10 @@ This repo contains an unofficial docker image for [EPUBCheck](https://github.com
 
 Images in this hub will always be updated to reflect the same version on the epubcheck official release.
 
+## Latest stable version
+
+[EPUBCheck 4.2.2](https://github.com/w3c/epubcheck/releases/tag/v4.2.2)
+
 ## Usage
 
 ```bash
