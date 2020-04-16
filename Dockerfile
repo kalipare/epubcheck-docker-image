@@ -4,7 +4,6 @@ RUN apt-get install curl unzip
 
 ARG EPUBCHECK_VERSION=4.2.2
 WORKDIR /tmp
-RUN export EPUBCHECK_VERSION=${EPUBCHECK_VERSION}
 RUN curl -L -O "https://github.com/w3c/epubcheck/releases/download/v${EPUBCHECK_VERSION}/epubcheck-${EPUBCHECK_VERSION}.zip"
 RUN unzip "./epubcheck-${EPUBCHECK_VERSION}.zip"
 
@@ -14,4 +13,5 @@ VOLUME ${DATA_PATH}
 
 COPY entrypoint.sh /tmp/entrypoint.sh
 RUN chmod +x /tmp/entrypoint.sh
+ENV EPUBCHECK_VERSION=${EPUBCHECK_VERSION}
 ENTRYPOINT [ "/tmp/entrypoint.sh" ]
