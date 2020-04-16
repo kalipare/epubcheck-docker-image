@@ -13,5 +13,5 @@ VOLUME ${DATA_PATH}
 
 COPY entrypoint.sh /tmp/entrypoint.sh
 RUN chmod +x /tmp/entrypoint.sh
-ENV EPUBCHECK_VERSION=${EPUBCHECK_VERSION}
+ENV JAR_PATH="/tmp/epubcheck-${EPUBCHECK_VERSION}/epubcheck.jar"
 ENTRYPOINT [ "/tmp/entrypoint.sh" ]
